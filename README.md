@@ -1,4 +1,4 @@
 #DATA STRUCTURE & ALGORITHM
-## Rutgers Graduate
+<center>*Rutgers Graduate*</center>
 
-** Including homework and projects**
+Including homework and projects
