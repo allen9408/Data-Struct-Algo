@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include "findMax.h"
 
 using namespace std;
 
@@ -12,7 +13,7 @@ int qufind_w(int id[], int p) {
 	return p;
 }
 
-void quunion_w(int id[], int height[], int p, int q, int len)
+void quunion_w(int id[], int height[], int p, int q)
 {
 	int pid = qufind_w(id, p);
 	int qid = qufind_w(id, q);
@@ -34,13 +35,9 @@ int main(int argc, char const *argv[])
 {
 	int len = atoi(argv[2]);
 	int (*data)[2] = new int[len][2];
+	int *temp = new int[2*len];
+
 	int count = 0;
-	int *id = new int[len];
-	int *height = new int[len];
-	for(int i=0; i<len; i++) {
-		id[i] = i;
-		height[i] = 1;
-	}
 	ifstream in;
 
 	/* Read data from file */
@@ -51,11 +48,29 @@ int main(int argc, char const *argv[])
 		}
 		// cout << data[i][0] << "	" << data[i][1] <<endl;
 	}
-	for(int i=0; i<len; i++){
-		quunion_w(id, height, data[i][0], data[i][1], len);
+	/* Find max value */
+	for (int i=0; i<len; i++) {
+		temp[2*i] 	= data[i][0];
+		temp[2*i+1]	= data[i][1];
+		// cout << temp[2*i] <<"---"<<temp[2*i+1]<<endl;
 	}
-	for(int i=0; i<len; i++){
-		cout << height[i] << " ";
+
+	int max_val = Max(temp,0,2*len - 1);
+
+
+	int *id = new int[max_val];
+	int *height = new int[max_val];
+	for(int i=0; i<max_val; i++) {
+		id[i] = i;
+		height[i] = 1;
 	}
+
+
+	for(int i=0; i<len; i++){
+		quunion_w(id, height, data[i][0], data[i][1]);
+	}
+	// for(int i=0; i<len; i++){
+	// 	cout << height[i] << " ";
+	// }
 	return 0;
 }

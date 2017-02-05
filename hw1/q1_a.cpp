@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
 	in.open(argv[1]);
 	int i = 0;
 	while (in >> data[i]) {
-		cout << data[i] << endl;
+		// cout << data[i] << endl;
 		i ++;
 	}
 	in.close();
