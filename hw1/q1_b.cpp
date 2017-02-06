@@ -1,18 +1,19 @@
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
 #include "quickSort.h"
 
 using namespace std;
 
-int Bin_search(int array[], int key, int len)
+int Bin_search(int array[], int key, int lo, int hi)
 {
-	int lo = 0;
-	int hi = len - 1;
+
 	int mid = 0;
 	while (lo <= hi) {
-		mid = lo + (lo + hi)/2;
-		// cout << "key = " << key << endl;
-		// cout << "mid = " << array[mid] << endl;
+		mid = lo + (hi - lo)/2;
+		// cout << lo << '	' << mid << '	' << hi << endl;
+		// cout << "key = " << key << "mid = " << array[mid] << endl;
+		
 		if (key < array[mid]) {
 			hi = mid - 1;
 		}else if (key > array[mid]) {
@@ -43,11 +44,12 @@ int main(int argc, char const *argv[])
 		i ++;
 	}
 	in.close();
-	
-	exchange(data, 0, len);
+	// cout << endl;
+
+	exchange(data, 0, len-1);
 	// for (i=0;i<len;i++)
 	// 	cout << data[i] << endl;
-
+	// cout << "sort complete" << endl;
 	for (i = 0; i < len; i++) {
 		for (int j = i+1; j < len; j++) {
 			// for (int k = j+1; k < len; k ++){
@@ -55,12 +57,13 @@ int main(int argc, char const *argv[])
 			// 		count ++;
 			// }
 			int tmp = -(data[i] + data[j]);
-			if (Bin_search(data, tmp, len) >= 0) {
+			// cout << tmp << endl;
+			if (Bin_search(data, tmp, j, len - 1) >= 0) {
 				count ++;
 				// cout << "tmp: " << tmp << "count" << count << endl;
 			}
 		}
 	}
-	cout << "Count=" << count << endl;
+	cout << "Count = " << count << endl;
 	return 0;
 }

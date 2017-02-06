@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "findMax.h"
+#include <stdlib.h>
 
 using namespace std;
 
@@ -46,13 +47,11 @@ int main(int argc, char const *argv[])
 		for (int j=0; j<2; j++) {
 			in >> data[i][j];
 		}
-		// cout << data[i][0] << "	" << data[i][1] <<endl;
 	}
 	/* Find max value */
 	for (int i=0; i<len; i++) {
 		temp[2*i] 	= data[i][0];
 		temp[2*i+1]	= data[i][1];
-		// cout << temp[2*i] <<"---"<<temp[2*i+1]<<endl;
 	}
 
 	int max_val = Max(temp,0,2*len - 1);
@@ -69,8 +68,9 @@ int main(int argc, char const *argv[])
 	for(int i=0; i<len; i++){
 		quunion_w(id, height, data[i][0], data[i][1]);
 	}
-	// for(int i=0; i<len; i++){
-	// 	cout << height[i] << " ";
-	// }
+	for(int i=0; i<len; i++){
+		cout << height[i] << " ";
+	}
+	cout << endl;
 	return 0;
 }

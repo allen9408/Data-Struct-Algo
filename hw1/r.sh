@@ -114,16 +114,22 @@ if [[ $1 -eq '7' ]]; then
 	#statements
 	echo 8
 	time ./q6_percolation 8
+	echo ============================
 	echo 32
 	time ./q6_percolation 32
+	echo ============================
 	echo 128
 	time ./q6_percolation 128
+	echo ============================
 	echo 512
 	time ./q6_percolation 512
+	echo ============================
 	echo 1024
 	time ./q6_percolation 1024
+	echo ============================
 	echo 4096
 	time ./q6_percolation 4096
+	echo ============================
 	echo 8192
 	time ./q6_percolation 8192
 fi

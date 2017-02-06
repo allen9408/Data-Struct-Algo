@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -25,11 +26,13 @@ int main(int argc, char const *argv[])
 	for (i = 0; i < len; i++) {
 		for (int j = i+1; j < len; j++) {
 			for (int k = j+1; k < len; k ++){
-				if (data[i] + data[j] + data[k] == 0)
+				if (data[i] + data[j] + data[k] == 0) {
 					count ++;
+					// break;
+				}
 			}
 		}
 	}
-
+	cout << "count = " << count << endl;
 	return 0;
 }
