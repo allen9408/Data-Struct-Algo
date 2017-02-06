@@ -62,11 +62,16 @@ int main(int argc, char const *argv[])
 	}
 
 	srand(time(NULL));
+
+	site[0] = 1;
+	site[grid_size-1] = 1;
 	for (int i=1; i<len; i++) {
 		// Union the first row
 		quunion(id, height, 0, i);
 		// Union the bottom row
 		quunion(id, height, grid_size-1, grid_size-1-i);
+		site[i] = 1;
+		site[grid_size-1-i] = 1;
 	}
 	// Loop until the system percolates
 	while (!percolate(id, len)) {
