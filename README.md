@@ -3,7 +3,7 @@
 
 ## Homework 1
 
-**Working Environment: **
+**Working Environment:** 
 
 1. OSX/ Linux
 2. G++
