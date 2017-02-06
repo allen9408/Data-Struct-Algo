@@ -16,12 +16,12 @@
 
 **Run**:
 
-> ./q1_a {Input file} {input size}
-> ./q1_b {Input file} {input size}
-> ./q2_quickFind {input file} {input size}
-> ./q2_quickUnion {input file} {input size}
-> ./q2_quickUnion_weighted {input file} {input size}
-> ./q2_quickUnion_PC {input file} {input size}
+> ./q1_a {Input file} {input size}  
+> ./q1_b {Input file} {input size}  
+> ./q2_quickFind {input file} {input size}  
+> ./q2_quickUnion {input file} {input size}  
+> ./q2_quickUnion_weighted {input file} {input size}  
+> ./q2_quickUnion_PC {input file} {input size}  
 > ./q6_percolation {input size}
 
 **Test:**
