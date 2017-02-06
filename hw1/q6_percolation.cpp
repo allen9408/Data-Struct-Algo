@@ -65,7 +65,7 @@ int main(int argc, char const *argv[])
 		while(site_2 == site_1) {
 			site_2 = (double)rand()/ (RAND_MAX) * (grid_size - 1);
 		}
-		cout << site_1 << "		" << site_2 << endl;
+		// cout << site_1 << "		" << site_2 << endl;
 
 		quunion(id, height, site_1, site_2);
 		step ++;
