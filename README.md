@@ -22,7 +22,9 @@
 > ./q2_quickUnion {input file} {input size}  
 > ./q2_quickUnion_weighted {input file} {input size}  
 > ./q2_quickUnion_PC {input file} {input size}  
-> ./q6_percolation {input size}
+> ./q6_percolation {input size}  
+>
+> Example: ./q2_quickFind ./HW1-2.data/ 32pair.txt 32
 
 **Test:**
 
