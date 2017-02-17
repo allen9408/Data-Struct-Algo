@@ -3,9 +3,9 @@
 
 using namespace std;
 
+// Return if it's an identity
 bool isId(char a[], int low, int high) {
 	if(low == high) {
-		// cout << a[low] << endl;
 		if ((a[low] >= 'a'&&a[low] <='z')||(a[low] >= 'A'&&a[low] <='Z')) {
 			return true;
 		} else {
@@ -18,6 +18,7 @@ bool isId(char a[], int low, int high) {
 	}
 }
 
+// Return if it's a prefix
 bool isPrefix(char a[], int low, int high) {
 	if(isId(a, low, high)) {
 		return true;
@@ -40,15 +41,13 @@ int main(int argc, char const *argv[])
 	int len = strlen(argv[1]);
 	char *a = new char[len];
 	strcpy(a,argv[1]);
-	// cout << "copy complete,a=" << a << endl;
-	// cout << "size = " << len << endl;
+	// Start from the end of the input
 	for (int i=0; i<=len; i++) {
 		if (isPrefix(a, 0, len-i)) {
 			cout << "The end of prefix: " << len-i+1 << endl;
 			return 1;
 		}
 	}
-	// cout << isPrefix(a,0,len-1) << endl;
 	cout << "Not a prefix format!" << endl;
 	return 0;
 }
