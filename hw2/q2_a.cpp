@@ -179,8 +179,8 @@ int main(int argc, char const *argv[])
 	ifstream reqIn;
 	reqIn.open(argv[3]);
 	// cout << "Open complete" << endl;
-	init();
 	while(reqIn >> city1 && reqIn >> city2) {
+		init();
 		cout << city1 <<" ----------------------------> "<< city2 << endl; 
 		if (find(city1, city2)) {
 			// cout << endl;
