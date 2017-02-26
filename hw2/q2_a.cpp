@@ -90,7 +90,7 @@ void load(char city[]) {
 	cityNode *p;
 	p = hashArray[hashVal]->nextCity;
 
-	while(p!=NULL && !(p->name == city)) {
+	while(p!=NULL && !!strcmp(p->name,city)) {
 		p = p->nextCity;
 	}
 	if (p == NULL) {
