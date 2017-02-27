@@ -1,5 +1,7 @@
 #include "linkStack.h"
-
+#include <iostream>
+#include <fstream>
+#include <stdlib.h>
 using namespace std;
 
 int partition(int a[], int low, int high) {
@@ -56,10 +58,22 @@ void quickSort(int a[], int low, int high) {
 
 int main(int argc, char const *argv[])
 {
-	int data[10] = {2,1,3,4,7,5,6,0,9,8};
-	quickSort(data, 0, 9);
-	for (int i=0; i<10; i++){
-		cout <<data[i] << endl;
+	ifstream fin;
+	ofstream fout;
+	int size = atoi(argv[2]);
+	int *array = new int[size];
+
+	fin.open(argv[1]);
+	for (int i=0; i<size; i++) {
+		fin >> array[i];
+	}
+	fin.close();
+	
+	quickSort(array, 0, size-1);
+	
+	fout.open(argv[3]);
+	for (int i=0; i<size; i++) {
+		fout << array[i] << endl;
 	}
 	return 0;
 }

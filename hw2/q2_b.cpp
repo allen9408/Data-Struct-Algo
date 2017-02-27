@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
+#include <stdlib.h>
 #include "linkStack.h"
 
 using namespace std;
