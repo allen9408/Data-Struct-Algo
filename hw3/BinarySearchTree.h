@@ -98,6 +98,7 @@ private:
 		} else if (x == t->data) {
 			return size(t->left);
 		}
+		return 0;
 	}
 
 	BinaryNode *select(const int r, BinaryNode *t) {
