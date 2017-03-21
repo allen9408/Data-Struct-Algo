@@ -98,3 +98,20 @@ g++ q5_b.cpp -o q5_b
 ./q5_b [input file] [input size] [output file] 
 ```
 
+## Homework 3
+
+### 2.a quicksort using median-of-three 
+
+```bash
+g++ q2_a.cpp -o q2_a
+./q2_a {input_file} {size} {output_file}
+```
+
+### 2.b quicksort using median-of-three and cut-off to insertion
+
+```bash
+g++ q2_b.cpp -o q2_b
+./q2_b {input_file} {size} {output_file}
+```
+
+### 
