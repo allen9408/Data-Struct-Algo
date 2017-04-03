@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
 		rbt.insert(x);
 	}
 	infile.close();
-	rbt.printTree();
+	// rbt.printTree();
 	rbt.getCost();
 	return 0;
 }
