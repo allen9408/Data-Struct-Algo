@@ -24,6 +24,8 @@ echo 2-3 Tree
 ./q1/q1 ./q1/data3.txt
 echo R-B Tree
 ./q2/q2 ./q2/data3.txt
+rm ./q1/data3.txt
+rm ./q2/data3.txt
 
 echo ==================================
 echo Q1 \& Q2 Size = 5
@@ -32,6 +34,8 @@ echo 2-3 Tree
 ./q1/q1 ./q1/data5.txt
 echo R-B Tree
 ./q2/q2 ./q2/data5.txt
+rm ./q1/data5.txt
+rm ./q2/data5.txt
 
 echo ==================================
 echo Q1 \& Q2 Size = 10
@@ -40,6 +44,8 @@ echo 2-3 Tree
 ./q1/q1 ./q1/data10.txt
 echo R-B Tree
 ./q2/q2 ./q2/data10.txt
+rm ./q1/data10.txt
+rm ./q2/data10.txt
 
 echo ==================================
 echo Q3 Size = 1000000
