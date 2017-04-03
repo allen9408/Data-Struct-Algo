@@ -83,6 +83,7 @@ private:
 					t->key[1] = t->key[0];
 					t->key[0] = x;
 					t->isThree = true;
+					return;
 				} else {
 					return;
 				}
